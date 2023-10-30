@@ -71,12 +71,16 @@ function keyboard(e) {
         case "z":
             undo();
             break:
-            case"y":
+        case "y":
             redo();
             break;
-            case"+":
-
+        case "+":
+            size++;
+            console.log(size);
             break;
-
+        case "-"
+            size = size <= 1 ? 1 : --size;
+            console.log(size);
+            break;
     }
 }
