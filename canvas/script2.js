@@ -48,11 +48,35 @@ function redraw(tab) {
         action.forEach(move => {
             ctx.strokeStyle = move.color;
             ctx.lineWidth = move.size;
-            ctx.lineTo(move.x,move.y)
+            ctx.lineTo(move.x, move.y)
             ctx.stroke();
             ctx.beginPath();
-            ctx.moveTo(move.x,move.y);
+            ctx.moveTo(move.x, move.y);
         })
     });
     ctx.beginPath();
+}
+function keyboard(e) {
+    e.preventDefault()
+    switch (e.key) {
+        case "s":
+            save();
+            break;
+        case "l":
+            load();
+            break;
+        case "c":
+            chooseColor();
+            break;
+        case "z":
+            undo();
+            break:
+            case"y":
+            redo();
+            break;
+            case"+":
+
+            break;
+
+    }
 }
